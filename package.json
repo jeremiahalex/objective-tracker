@@ -6,7 +6,7 @@
   "scripts": {
     "start": "source .env; node-dev server.js",
     "debug": "source .env; node-debug server.js",
-    "test": "NODE_ENV=test mocha --recursive test"
+    "test": "NODE_ENV=test istanbul cover _mocha -- --recursive"
   },
   "engines": {
     "node": "5.9.0"
