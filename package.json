@@ -1,0 +1,32 @@
+{
+  "name": "ObjectiveTracker",
+  "version": "0.1.0",
+  "description": "Easily track student progress against lesson objectives in real-time",
+  "main": "app.js",
+  "scripts": {
+    "start": "source .env; node-dev server.js",
+    "debug": "source .env; node-debug server.js",
+    "test": "NODE_ENV=test mocha --recursive test"
+  },
+  "engines": {
+    "node": "5.9.0"
+  },
+  "keywords": [],
+  "author": "Jeremiah Alexander",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^0.8.5",
+    "body-parser": "^1.15.0",
+    "ejs": "^2.4.1",
+    "express": "^4.13.4",
+    "express-jwt": "^3.3.0",
+    "jsonwebtoken": "^5.7.0",
+    "mongoose": "^4.4.10",
+    "morgan": "^1.7.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "pathfinder-ui": "^1.0.3",
+    "supertest": "^1.2.0"
+  }
+}
