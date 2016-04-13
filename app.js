@@ -3,7 +3,6 @@
 // REQUIREMENTS
 const express       = require('express');           //express as our web server
 const morgan        = require('morgan');
-const pathfinderUI  = require('pathfinder-ui');     //dev dependency TODO. remove
 const app           = express();
 // local requirements
 const routes        = require('./config/routes');   //our route definitions
@@ -17,10 +16,6 @@ app.set('view engine', 'ejs');
 if (process.env.NODE_ENV !== 'test') {
   app.use(morgan('dev'));
 }
-app.use('/routes', function(req, res, next){
-    pathfinderUI(app);
-    next();
-}, pathfinderUI.router);
   
 // Plug in api routes
 app.use('/api', routes);
